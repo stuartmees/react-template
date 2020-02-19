@@ -23,6 +23,7 @@
     "webpack-cli": "^3.3.11"
   },
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "build": "webpack -p"
   }
 }

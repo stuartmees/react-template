@@ -3,11 +3,11 @@
 */
 import React from 'react';
 
-export default class App extends React.Component {
+export default class Component1 extends React.Component {
   render() {
     return (
      <div style={{textAlign: 'center'}}>
-        <h1>Hello World</h1>
+        <h1>Hello Stu</h1>
       </div>);
   }
 }
