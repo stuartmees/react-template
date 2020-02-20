@@ -101,6 +101,47 @@ module.exports = {
 `devServer` tells webpack where we will be serving our app from.
 
 
+## Webpack with Babel
+
+Babel transpiles code into vanilla JS that any browser can read. Install it as follows:
+
+```
+npm install --save-dev @babel/core @babel/preset-env
+```
+
+To use Babel with Webpack the Webpack Loader needs to be installed:
+
+```
+npm install --save-dev babel-loader
+```
+
+Add the following file to your route `.babelrc`, and add the bbel config:
+
+>/.babelrc
+```
+{
+    "presets": ["@babel/preset-env"]
+}
+```
+
+The add instruction in the `webpack.config.js` that tells webpack which files to use babel for:
+
+```
+  module: {
+    rules: [
+      {
+        test: /\.(js)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader']
+      }
+    ]
+  },
+  resolve: {
+    extensions: ['*', '.js']
+  }
+  ```
+
+
 
 
 
